@@ -3,7 +3,7 @@ const app =  express();
 const mongoose = require ("mongoose");
 
 app.get("/",(req,res)=>{
-    res.send("hi this is root!");
+    res.render('includes/navbar.ejs');
 })
 
 app.listen(8080, ()=>{
