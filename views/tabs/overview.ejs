@@ -1,11 +1,14 @@
 <%- layout ("../views/layouts/boilerplate") %>
 <body>
     <gmp-map
-      center="38.7946,-106.5348"
-      zoom="4"
+      center="27.667,88.5000"
+      zoom="8"
       map-id="process.env.GOOGLE_MAPS"
-      style="height: 400px"
+      style="height: 87vh; width: 100%"
+      mapTypeControl: false
     >
     </gmp-map>
-
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%=process.env.GOOGLE_MAPS %>&libraries=maps,marker&v=weekly" async></script>
+    
 </body>

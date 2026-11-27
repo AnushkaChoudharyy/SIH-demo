@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require ("express");
 const app =  express();
 const ejsMate = require("ejs-mate");
@@ -11,7 +12,9 @@ app.use(express.static(path.join(__dirname,"public")));
 
 
 app.get("/", (req, res) => {
-    res.render("tabs/overview");
+    res.render("tabs/overview", {
+        googleMapsKey: process.env.GOOGLE_MAPS
+    });
 });
 
 app.listen(8080, ()=>{
